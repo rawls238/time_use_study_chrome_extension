@@ -1,0 +1,39 @@
+{
+    "manifest_version":2,
+    "name":"Time Tracker",
+    "short_name":"Time Tracker",
+    "description":"Tells you how much time you're spending on social media and other websites.",
+    "author":"Guy Aridor (modification of Dave Jacobowitz's application)",
+    "options_ui":{
+        "page":"options.html",
+        "chrome_style":true
+    },
+    "version":"1.0.3",
+    "permissions":[
+        "storage",
+        "alarms",
+        "tabs",
+        "https://smartphone-experiment.herokuapp.com/*"
+    ],
+    "background":{
+        "persistent":false,
+        "scripts":[
+            "timekeeper.js"
+        ]
+    },
+    "browser_action":{
+        "default_icon":{
+            "128":"icons/ic2-128.png"
+        },
+        "default_title":"Configure Web Time Tracker",
+        "default_popup":"options.html"
+    },
+    "icons":{
+        "128":"icons/ic2-128.png",
+        "200":"icons/ic2-200.png",
+        "400":"icons/ic2-400.png"
+    },
+    "web_accessible_resources":[
+        "empty_image.png"
+    ]
+}
